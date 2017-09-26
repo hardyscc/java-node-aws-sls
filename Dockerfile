@@ -1,4 +1,5 @@
 FROM java:8
+MAINTAINER Hardys <hardyscc@gmail.com>
 
 # Do a general update to help downstream container bulids
 RUN apt-get clean && apt-get update
@@ -10,8 +11,8 @@ RUN apt-get install -y nodejs
 # install awscli
 RUN apt-get install -y awscli
 
-# install serverless
-RUN npm install -g serverless
+# update npm & install serverless
+RUN npm install -g npm serverless
 
 # Add a default Command
 CMD ["bash"]
