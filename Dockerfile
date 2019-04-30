@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8
 MAINTAINER Hardys <hardyscc@gmail.com>
 
 # Do a general update to help downstream container bulids
